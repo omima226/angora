@@ -1,0 +1,110 @@
+<!-- [rows]="filterdMaterials | searchFilter: keyword" [rowClass]="borderClass" [columnMode]="ColumnMode.force" -->
+
+<div class="row page-head align-items-center justify-content-between py-3 flex-wrap">
+    <div class="col-xxl-3 col-xl-3 col-lg-7">
+        <h3>Vendor Management</h3>
+        <p>View list of all registered vendors on the platform ….</p>
+    </div>
+    <mat-form-field class="example-full-width search p-0 col-xxl-2 col-xl-2 col-lg-5">
+        <!-- <mat-label>Favorite food</mat-label> -->
+        <div class="position-relative">
+            <input class="w-100 ps-4" matInput placeholder="Search results">
+            <svg class="position-absolute start-0 top-50 translate-middle" xmlns="http://www.w3.org/2000/svg" width="14.841" height="13.973" viewBox="0 0 14.841 13.973">
+                <g id="Group_4" data-name="Group 4" transform="translate(0.75 0.75)">
+                    <path id="Shape" d="M4.849,9.7A4.849,4.849,0,1,0,0,4.849,4.849,4.849,0,0,0,4.849,9.7Z"
+                        transform="translate(0 0)" fill="none" stroke="#343434" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" />
+                    <path id="Shape-2" data-name="Shape" d="M0,0,4.249,3.1" transform="translate(8.794 9.075)"
+                        fill="none" stroke="#343434" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-miterlimit="10" stroke-width="1.5" />
+                </g>
+            </svg>
+
+        </div>
+    </mat-form-field>
+    <div class="d-flex col-xxl-5 col-xl-5 col-lg-7 my-3 justify-content-between">
+        <div class="d-flex mx-2 align-items-center">
+            <input class="" type="radio" name="view" id="all">
+            <label class="mb-0" for="all">View all vendors</label>
+        </div>
+        <div class="d-flex mx-2 align-items-center">
+            <input type="radio" name="view" id="continue">
+            <label class="mb-0" for="continue">continued vendor</label>
+        </div>
+        <div class="d-flex mx-2 align-items-center">
+            <input type="radio" name="view" id="suspend">
+            <label class="mb-0" for="suspend">Suspended vendor</label>
+        </div>
+    </div>
+    <mat-form-field class="view col-xxl-2 col-xl-2 col-lg-5">
+        <!-- <mat-label>Favorite food</mat-label> -->
+        <mat-select>
+            <mat-option [value]="true">
+                View Accepted
+            </mat-option>
+            <mat-option [value]="false">
+                Newed Vendor
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+
+<ngx-datatable class="ngx-datatable material fixed-header virtualized fixed-header tabelWidth" [rowClass]="borderClass"
+    [columnMode]="ColumnMode.force" [rowHeight]="80" [headerHeight]="50" [scrollbarH]="true" [limit]="5"
+    [footerHeight]="50" [rows]="vendors">
+    <ngx-datatable-column name="Image" prop="logo" [sortable]="false">
+        <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+            <div class="d-flex myStatus justify-content-center text-center">
+                <img [src]="value?.fullLink" style="height: 50px;">
+            </div>
+        </ng-template>
+
+    </ngx-datatable-column>
+
+    <ngx-datatable-column [sortable]="false" name="Vendor name" prop="name">
+    </ngx-datatable-column>
+    <ngx-datatable-column [sortable]="false" name="Description" prop="description">
+    </ngx-datatable-column>
+    <ngx-datatable-column [sortable]="false" name="Owner Name" prop="ownerName">
+    </ngx-datatable-column>
+    <ngx-datatable-column [sortable]="false" name="Owner phone number" prop="ownerPhoneNumber">
+    </ngx-datatable-column>
+    <ngx-datatable-column [sortable]="false" name="Vendor action" prop="isActive">
+        <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+            <mat-form-field class="continue">
+                <!-- <mat-label>Favorite food</mat-label> -->
+                <mat-select [value]="value">
+                    <mat-option [value]="true">
+                        Continue
+                    </mat-option>
+                    <mat-option [value]="false">
+                        Suspend
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column [sortable]="false" name="Vendor" prop="isApproved">
+        <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+            <mat-form-field class="accepted">
+                <!-- <mat-label>Favorite food</mat-label> -->
+                <mat-select [value]="value">
+                    <mat-option [value]="true">
+                        Accepted
+                    </mat-option>
+                    <mat-option [value]="false">
+                        Decline
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Options" [sortable]="false">
+        <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+            <div class="fa-solid fa-trash-alt mx-2 cursor-pointer text-danger"></div>
+            <div [routerLink]="'/'+ row._id" class="fa-solid fa-edit mx-2 text-warning cursor-pointer">
+            </div>
+            <i class="mx-2 cursor-pointer fa-regular fa-eye text-success" [routerLink]="'/'"></i>
+        </ng-template>
+    </ngx-datatable-column>
+</ngx-datatable>

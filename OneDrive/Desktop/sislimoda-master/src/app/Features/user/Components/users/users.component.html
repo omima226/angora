@@ -1,0 +1,41 @@
+<!-- [rows]="filterdMaterials | searchFilter: keyword" [rowClass]="borderClass" [columnMode]="ColumnMode.force" -->
+<ngx-datatable class="ngx-datatable material fixed-header virtualized fixed-header tabelWidth" [rowClass]="borderClass"
+    [columnMode]="ColumnMode.force" [rowHeight]="80" [headerHeight]="50" [scrollbarH]="true" [limit]="5"
+    [footerHeight]="50" [rows]="orders">
+    <ngx-datatable-column name="Image" prop="img" [sortable]="false">
+        <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+            <div class="d-flex myStatus justify-content-center text-center">
+                <!-- <img [src]="row?.image" style="height: 50px;"> -->
+            </div>
+        </ng-template>
+
+    </ngx-datatable-column>
+
+    <ngx-datatable-column [sortable]="false" name="product details" prop="details">
+        <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+            <span>{{value.slice(0,40)}}...</span>
+        </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column [sortable]="false" name="Inventory" prop="shippingAddress">
+        <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+            <span>{{value.slice(0,40)}}...</span>
+        </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column [sortable]="false" name="Category" prop="customerName">
+    </ngx-datatable-column>
+    <ngx-datatable-column [sortable]="false" name="Brand" prop="orderStatus">
+        <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+            <span class="">{{value }}</span>
+        </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column [sortable]="false" name="Delivery Available" prop="customerName">
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Options" [sortable]="false">
+        <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+            <!-- <div (click)="deleteCourse(row._id)" class="fa-solid fa-trash-alt mx-2 cursor-pointer"></div>
+      <div [routerLink]="_MaterialsRoutes.updateMaterials+'/'+ row._id" class="fa-solid fa-edit mx-2 cursor-pointer">
+      </div> -->
+            <!-- <i class="mx-2 cursor-pointer fa-regular fa-eye" [routerLink]="'/'+_ChaptersRoutes.chapters + '/' + row._id"></i> -->
+        </ng-template>
+    </ngx-datatable-column>
+</ngx-datatable>

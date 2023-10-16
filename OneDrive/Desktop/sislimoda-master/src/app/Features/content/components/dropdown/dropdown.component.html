@@ -1,0 +1,103 @@
+<div class="container-fluid mb-5">
+  <div class="row justify-content-between">
+    <div class="col-md-3 row">
+      <h5 class="pt-3">Content Management</h5>
+      <p class="first_pragraph mt-3 w-auto">Manage static pages, banners, and promotional content</p>
+    </div>
+    <div class="col-12 col-md-9">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="form mt-3">
+            <i class="fa fa-search ml-2 mt-2"></i>
+            <input type="text" class="form-control form-input rounded-4" placeholder="Search anything...">
+          </div>
+        </div>
+        <div class="col-12 col-md-6 ">
+            <mat-form-field class="mt-4">
+              <mat-label>Favorite food</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                  {{food.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <button class="btn mt-2 ml-2 border rounded-4" style="height: 51px;text-align: left; background-color: #D80003; color: #fff;">Add Section <i class="fa-solid fa-plus ml-3"></i></button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="h-100 w-100 shadow mt-4 rounded-bottom-3 border">
+    <div style="background-color: black; width: 100%; height: 60px;" class="rounded-top">
+      <p class="ml-3 p-3" style="color: #fff; font-weight: bold; display: flex;">Home Page Sections</p>
+    </div>
+    <div class="container-fluid">
+      <div class="d-flex justify-content-lg-between">
+        <div class=" col col-md-6">
+          <button class="btn mt-3 ml-2 border rounded-4 d-flex" style="width: 160px; height: 51px;text-align: left;"> <i class="fa-solid fa-chevron-down mt-2 mr-1"></i> ماركات تحت الض </button>
+        </div>
+        <div class="col col-md-6 row p-2">
+          <button class="btn mt-3 ml-2  mr-3 rounded-4 ml-auto" style="width: 94px; height: 51px;text-align: left; background-color: black; color: #fff;text-align: center;">Add<i class="fa-solid fa-plus ml-2"></i></button>
+        </div>
+      </div>
+      <div class="mt-5 mb-5 ml-3">
+        <div class="row d-flex justify-content-between">
+          <div class="col-lg-2 col-md-6">
+            <img src="../../../../../assets/images/Image 22.png" alt="">
+            <div class="d-flex mt-3">
+              <div class="col-6">
+                <button class="btn mt-3 ml-1 border rounded-4 w-100" style="width: 50px; height: 51px; text-align: left; background-color: black; color: #fff; text-align: center;">Use<i class="fa-solid fa-plus ml-5"></i></button>
+              </div>
+              <div class="col-6 mt-4 ml-2">
+                <i class="fa-solid fa-pen-to-square p-2 text-black"></i>
+                <i class="fa-solid fa-trash p-2 text-black"></i>
+                <i class="fa-solid fa-ellipsis-vertical text-black"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <img src="../../../../../assets/images/Image 22.png" alt="">
+            <div class="d-flex mt-3">
+              <div class="col-6">
+                <button class="btn mt-3 ml-1 border rounded-4 w-100" style="width: 50px; height: 51px; text-align: left; background-color: black; color: #fff; text-align: center;">Use<i class="fa-solid fa-plus ml-5"></i></button>
+              </div>
+              <div class="col-6 mt-4 ml-2">
+                <i class="fa-solid fa-pen-to-square p-2 text-black"></i>
+                <i class="fa-solid fa-trash p-2 text-black"></i>
+                <i class="fa-solid fa-ellipsis-vertical text-black"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <img src="../../../../../assets/images/Image 22.png" alt="">
+            <div class="d-flex mt-3">
+              <div class="col-6">
+                <button class="btn mt-3 ml-1 border rounded-4 w-100" style="width: 50px; height: 51px; text-align: left; background-color: black; color: #fff; text-align: center;">Use<i class="fa-solid fa-plus ml-5"></i></button>
+              </div>
+              <div class="col-6 mt-4 ml-2">
+                <i class="fa-solid fa-pen-to-square p-2 text-black"></i>
+                <i class="fa-solid fa-trash p-2 text-black"></i>
+                <i class="fa-solid fa-ellipsis-vertical text-black"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <img src="../../../../../assets/images/Image 22.png" alt="">
+            <div class="d-flex mt-3">
+              <div class="col-6">
+                <button class="btn mt-3 ml-1 border rounded-4 w-100" style="width: 50px; height: 51px; text-align: left; background-color: black; color: #fff; text-align: center;">Use<i class="fa-solid fa-plus ml-5"></i></button>
+              </div>
+              <div class="col-6 mt-4 ml-2">
+                <i class="fa-solid fa-pen-to-square p-2 text-black"></i>
+                <i class="fa-solid fa-trash p-2 text-black"></i>
+                <i class="fa-solid fa-ellipsis-vertical text-black"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

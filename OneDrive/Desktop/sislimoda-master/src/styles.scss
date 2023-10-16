@@ -1,0 +1,481 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$app-primary: mat.define-palette(mat.$indigo-palette);
+$app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$app-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$app-theme: mat.define-light-theme((color: (primary: $app-primary,
+                accent: $app-accent,
+                warn: $app-warn,
+            )));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($app-theme);
+
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "node_modules/@swimlane/ngx-datatable/index.css";
+@import "node_modules/@swimlane/ngx-datatable/themes/material.scss";
+@import "node_modules/@swimlane/ngx-datatable/assets/icons.css";
+@import "node_modules/primeng/resources/primeng.min.css";
+
+$primaryColor: #000000;
+$secondColor: #D80003;
+$thirdColor: #F1F2F7;
+$fifthColor: white;
+
+body {
+    -webkit-font-smoothing: antialiased;
+
+}
+
+
+#wrapper #content-wrapper {
+    background-color: white;
+}
+
+//button in header component
+.myButton {
+    height: 45px;
+}
+
+//plus of add button
+.plusSize {
+    font-size: 30px;
+    padding: 0px 3px;
+    margin-bottom: 5px;
+}
+
+//text of add button
+.addSize {
+    font-size: 18px;
+    // margin-top: 15px !important;
+}
+
+.btn-color {
+    background-color: $secondColor;
+    color: $fifthColor;
+    // padding-top: 0% !important;
+    // padding-bottom: 0% !important;
+}
+
+.btn-color:hover {
+    background-color: $secondColor;
+    color: $fifthColor;
+}
+
+::ng-deep ngx-dropzone {
+    height: auto !important;
+    padding: 0 10px;
+}
+
+.btn-first {
+    background-color: $secondColor;
+    color: white;
+}
+
+.btn-second {
+    color: #6659C5;
+    border: 1px solid #C4C4C4;
+}
+
+
+.input-group-text {
+    background-color: unset !important;
+}
+
+input {
+    padding: 23px 0;
+}
+
+$mainColor: #506499;
+// $primaryColor: rgb(2, 30, 107);
+
+
+.datatable-header-cell,
+.datatable-header {
+    // background-color: $mainColor !important;
+    color: #FFFFFF !important;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center !important;
+    background-color: #000000 !important;
+
+}
+
+.row-border {
+    border-bottom: 1px solid #ccc;
+}
+
+.datatable-body-cell {
+    text-align: center !important;
+}
+
+.datatable-body-cell-label {
+    margin-top: 10px;
+    text-wrap: wrap;
+}
+
+::ng-deep .ngx-datatable .datatable-footer .datatable-pager {
+    text-align: center !important;
+}
+
+::ng-deep .ngx-datatable.material .datatable-footer .datatable-pager li.active a {
+    background-color: #D80003 !important;
+    border-radius: 50% !important;
+    min-width: 24px;
+    height: 24px;
+    border: 1px solid #E7E7E7;
+    color: #f0f0f0;
+}
+
+::ng-deep .ngx-datatable.material .datatable-footer .datatable-pager a {
+    // height: 28px !important;
+    // min-width: 28px !important;
+    // line-height: 30px !important;
+    // padding: 0 6px !important;
+    padding: 0 !important;
+    font-size: 15px;
+    margin: 6px 3px;
+    border-radius: 50% !important;
+    min-width: 24px;
+    height: 24px;
+
+}
+
+::ng-deep .ngx-datatable.material .datatable-footer .datatable-pager {
+
+    .datatable-icon-right,
+    .datatable-icon-left {
+        width: 24px;
+        height: 24px;
+        border: 1px solid #E7E7E7;
+        border-radius: 50% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+::ng-deep .ngx-datatable.material .datatable-footer .datatable-pager {
+
+    // .datatable-icon-prev,
+    // .datatable-icon-skip {
+    //     display: none;
+    // }
+
+    a[aria-label="go to last page"] {
+        display: none !important;
+    }
+
+    a[aria-label="go to first page"] {
+        display: none !important;
+    }
+}
+
+::ng-deep .ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+}
+
+[class^="datatable-icon-"]::before,
+[class*=" datatable-icon-"]::before {
+    line-height: 28px;
+    font-size: 25px;
+}
+
+[class^="datatable-icon-"]::after,
+[class*=" datatable-icon-"]::after {
+    line-height: 28px;
+}
+
+// .ngx-datatable.material .datatable-footer .page-count {
+//     display: none !important;
+// }
+datatable-row-wrapper {
+    width: fit-content !important;
+}
+
+.ngx-datatable.material .datatable-footer {
+    border-top: unset !important;
+}
+
+.ngx-datatable.fixed-row .datatable-scroll,
+.ngx-datatable.fixed-row .datatable-scroll .datatable-body-row {
+    width: fit-content !important;
+}
+
+.ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-body-cell,
+.ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-body-group-cell {
+    overflow: unset !important;
+}
+
+::ng-deep .ngx-datatable {
+    text-align: center;
+}
+
+::ng-deep .ngx-datatable .datatable-header {
+    display: flex !important;
+    align-items: center;
+    background-color: #F1F2F7 !important;
+    margin-bottom: 10px;
+    color: #707FDD;
+    border-radius: 10px;
+    text-align: center;
+}
+
+::ng-deep .ngx-datatable .datatable-body-cell {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+
+}
+
+::ng-deep .ngx-datatable .datatable-body .datatable-body-row {
+    // border: 1px solid #EBE8FF;
+    margin: 5px -1px;
+    border-radius: 15px;
+}
+
+::ng-deep .ngx-datatable .datatable-footer .page-count {
+    flex: none !important;
+}
+
+::ng-deep .ngx-datatable .datatable-footer .datatable-pager {
+    flex: none !important;
+    border: 1px solid #E7E7E7 !important;
+    border-radius: 20px;
+}
+
+::ng-deep .ngx-datatable .datatable-footer .datatable-footer-inner {
+    justify-content: space-between;
+}
+
+::ng-deep .ngx-datatable .datatable-footer .datatable-pager .pager {
+    li a {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center;
+    }
+
+    padding: 0 3px !important;
+
+}
+
+::ng-deep .ngx-datatable.material {
+    box-shadow: none;
+    overflow: visible;
+}
+
+// ::ng-deep .ngx-datatable.scroll-horz .datatable-body{
+//     overflow: visible;
+// }
+
+// ::ng-deep .ngx-datatable.scroll-horz .datatable-body{
+//     overflow: visible;
+
+// }
+
+
+::ng-deep .datatable-body {
+    min-height: 460px;
+}
+
+
+
+::ng-deep .ngx-datatable.material:not(.cell-selection) .datatable-body-row:hover {
+    background-color: white !important;
+    transition-property: none !important;
+    transition-duration: 0 !important;
+    transition-timing-function: linear !important;
+}
+
+
+.ngx-datatable.material:not(.cell-selection) {
+    .datatable-body-row {
+
+        &:hover,
+        &:hover .datatable-row-group {
+            // background-color: $ngx-datatable-default-background-hover;
+            background-color: white !important;
+            transition-property: background;
+            transition-duration: 0.3s;
+            transition-timing-function: linear;
+        }
+
+        &:focus,
+        &:focus .datatable-row-group {
+            background-color: white
+        }
+    }
+}
+
+.ngx-datatable .datatable-body .datatable-body-row {
+    outline: solid 1px #EBE8FF !important;
+}
+
+.ngx-datatable.material .datatable-header,
+.ngx-datatable.scroll-horz .datatable-body {
+    width: 100% !important;
+
+}
+
+hr {
+    background-color: #D3D3D3;
+    height: 1px;
+    border-radius: 2px;
+    opacity: 1;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+::ng-deep {
+    .mat-mdc-form-field-infix {
+        width: fit-content !important;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .mdc-text-field--no-label:not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) .mat-mdc-form-field-infix{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .mat-mdc-form-field-infix{
+        min-height: 45px;
+        display: flex;
+        align-items: center;
+    }
+
+    .mat-mdc-select-value {
+        padding-right: 10px;
+    }
+
+    .mat-mdc-select-arrow-wrapper {}
+
+    .continue {
+
+        .mat-mdc-form-field-focus-overlay,
+        .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+            background-color: #81FFCA !important;
+            border-radius: 15px;
+        }
+    }
+
+    .suspend {
+
+        .mat-mdc-form-field-focus-overlay,
+        .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+            background-color: #FFDCDC !important;
+            border-radius: 15px;
+        }
+    }
+
+    .decline {
+
+        .mat-mdc-form-field-focus-overlay,
+        .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+            background-color: transparent !important;
+            border-radius: 15px;
+            border: .5px #D80003 solid;
+
+            .mat-mdc-select-value-text {
+                color: #D80003 !important;
+
+            }
+        }
+    }
+    .accepted {
+
+        .mat-mdc-form-field-focus-overlay,
+        .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+            background-color: transparent !important;
+            border-radius: 15px;
+            border: .5px #81FFCA solid;
+
+            .mat-mdc-select-value-text {
+                color: #69d3a7 !important;
+
+            }
+        }
+    }
+    .view {
+
+        .mat-mdc-form-field-focus-overlay,
+        .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+            background-color: transparent !important;
+            border-radius: 15px;
+            border: .5px #707070 solid;
+
+            .mat-mdc-select-value-text {
+                color: #343434 !important;
+
+            }
+        }
+    }
+    .search {
+
+        .mat-mdc-form-field-focus-overlay,
+        .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+            background-color: transparent !important;
+            border-radius: 15px;
+            border: .5px #707070 solid;
+
+            .mat-mdc-select-value-text {
+                color: #343434 !important;
+
+            }
+        }
+    }
+
+
+    .mdc-text-field--filled {
+        --mdc-filled-text-field-active-indicator-height: 0px !important;
+        --mdc-filled-text-field-focus-active-indicator-height: 0px !important;
+        // display: none;
+    }
+
+    .mat-mdc-form-field-subscript-wrapper {
+        display: none !important;
+    }
+
+    .page-head .mat-mdc-form-field-infix {
+        // min-width: 172px !important;
+    }
+
+}
