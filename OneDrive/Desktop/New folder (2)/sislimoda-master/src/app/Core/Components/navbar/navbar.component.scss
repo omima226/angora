@@ -1,0 +1,26 @@
+.navbar{
+    background-color: #F7F7F7;
+}
+
+
+
+
+@media screen and (max-width: 575px) {
+    .navbar-nav img.border{
+        border-right: 0 !important;
+        padding-right: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .navbar-nav .nav-item{
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 364px) {
+    .navbar .navbar-nav.me-auto, .navbar .navbar-nav.ms-auto{
+        margin: auto !important;
+        margin-top: 10px;
+
+    }
+}

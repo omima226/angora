@@ -1,0 +1,75 @@
+h5 {
+  font-family: "Poppins-Bold";
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  text-align: left;
+  color: #d80003;
+  width: 175px;
+  height: 23px;
+}
+
+.first_pragraph {
+  width: 243px;
+  height: 17px;
+  font-family: "Poppins-Regular";
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  text-align: left;
+  color: #343434;
+}
+
+img {
+  overflow: hidden;
+}
+
+.second_pragraph {
+  font-family: "Poppins-Bold";
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  text-align: left;
+ color: #000;
+  width: 160px;
+  height: 23px;
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  border: none;
+  padding-left: 40px;
+}
+
+.fa-search {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+
+.fa-chevron-down {
+  font-size: 12px;
+}
+
+.fa-plus {
+  font-size: 12px;
+}
+
+.fa-pen-to-square,
+.fa-trash,
+.fa-ellipsis-vertical {
+  font-size: 16px;
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+

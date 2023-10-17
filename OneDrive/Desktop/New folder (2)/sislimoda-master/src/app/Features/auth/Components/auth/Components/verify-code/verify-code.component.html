@@ -1,0 +1,11 @@
+<!----------------------------------------------- Code sent inputs --------------------------------------->
+<form [formGroup]="verifyCodeForm" (submit)="verifyCode(verifyCodeForm)">
+    <div class="text-start">
+        <h6>Please type your code sent </h6>
+
+        <input formControlName="code" type="text" placeholder="Code" class="form-control rounded-3" id="exampleInputEmail1"
+            aria-describedby="emailHelp">
+        <button routerLink="/auth/changePassword" type="submit" class="btn rounded-3 mt-4 w-100"
+            style="background-color: black; color: #fff; ">NEXT</button>
+    </div>
+</form>

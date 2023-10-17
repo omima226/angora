@@ -1,0 +1,25 @@
+// table{
+//   border-collapse: separate;
+//   border-spacing: 0;
+//   border-radius: 10px;
+// }
+
+
+table th {
+  background-color: black;
+  color: white;
+}
+table td {
+  background-color: white;
+  word-wrap: break-word;
+  width: 100px;
+  color: #343434;
+  align-items: center;
+  // text-align: center;
+
+}
+.rounded-table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+

@@ -1,0 +1,44 @@
+.style_login {
+    background-size: cover;
+    background-image: url(/assets/images/full-shot-woman-online-fashion-shopping.png);
+    min-height: 100vh;
+    min-width: 100vh;
+
+    /* Set up proportionate scaling */
+    // width: 100%;
+    // height: auto;
+    background-size: 100% 120%;
+
+    /* Set up positioning */
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    /* Specific to this particular image */
+    .style_login {
+        left: 50%;
+        margin-left: -252px;
+        /* 50% */
+    }
+}
+
+
+
+
+.form {
+    height: fit-content;
+    min-height: 80vh;
+}
+
+.form div{
+    min-height: 80vh;
+}
+
+.style_login img{
+    width: 151px;
+}
+
